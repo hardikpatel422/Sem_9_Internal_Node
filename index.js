@@ -10,7 +10,6 @@ const str = prompt('Enter a String: ');
 // console.log (String (str));
 
 let alpha = "";
-
 let special = "";
 for (let i = 0; i < str.length; i++) {
 
@@ -20,6 +19,13 @@ for (let i = 0; i < str.length; i++) {
     else
         special += str[i];
 }
-
+fs.writeFileSync(pathname +'/alpha.txt',alpha);
+fs.writeFileSync(pathname +'/special.txt',special);
 console.log(alpha)
 console.log(special)
+
+
+// for delete file
+
+// fs.unlinkSync(pathname + '/alpha.txt');
+// fs.unlinkSync(pathname + '/special.txt');
